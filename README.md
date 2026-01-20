@@ -1,83 +1,60 @@
-# CLIMAECUADOR
+# 🌦️ CLIMAECUADOR
 
-Página simple en PHP que muestra datos climatológicos para ciudades de Ecuador (Quito, Guayaquil, Cuenca, Manta). Usa OpenWeatherMap cuando se configura la API key; de lo contrario usa datos de ejemplo.
+**CLIMAECUADOR** es una aplicación web sencilla que muestra información climatológica de las principales ciudades del Ecuador 🇪🇨, combinando un diseño moderno con datos claros y recomendaciones útiles para el día a día.
 
-Instalación y ejecución local
+---
 
-1. Opcional: obtener una API key gratuita en https://openweathermap.org/.
-2. En PowerShell, exporta la variable de entorno (opcional):
+## 🏙️ Ciudades incluidas
 
-```powershell
-$env:OWM_API_KEY = "TU_API_KEY"
-php -S localhost:8000
-```
+La aplicación presenta datos climáticos de:
 
-3. Abrir en el navegador: http://localhost:8000/
+- ⛰️ **Quito** – Región Sierra  
+- 🌊 **Guayaquil** – Región Costa  
+- 🌄 **Cuenca** – Región Sierra  
+- 🏖️ **Manta** – Región Costa  
 
-Archivos relevantes
+Cada ciudad muestra:
 
+- 🌡️ Temperatura actual  
+- ☁️ Estado del clima (soleado, nublado, lluvias, etc.)  
+- 💧 Humedad  
+- 🌬️ Velocidad del viento  
+- ✅ Recomendación según el clima  
 
-Notas
+---
 
+## 🎨 Características principales
 
-# CLIMAECUADOR
+- Interfaz con **colores cálidos** inspirados en el clima ecuatoriano  
+- Diseño tipo **tarjetas** (cards) para cada ciudad  
+- Iconos climáticos intuitivos  
+- Recomendaciones prácticas para los usuarios  
+- Datos reales usando **OpenWeatherMap** (opcional)  
 
-Página en PHP que muestra datos climatológicos para algunas ciudades de Ecuador (Quito, Guayaquil, Cuenca, Manta). En local se ejecuta con PHP; GitHub Pages solo sirve contenido estático (no ejecuta PHP). Si subes solo los archivos PHP a GitHub Pages, no se verá igual que en `localhost`.
+---
 
-Demo local
+## 🧪 Ejecución en local (con PHP)
 
-- Inicia un servidor PHP en tu máquina y abre `http://localhost:8000/`:
+Este proyecto fue desarrollado en **PHP** y funciona correctamente en un entorno local con servidor PHP.
 
-```powershell
-$env:OWM_API_KEY = "TU_API_KEY"   # opcional
-php -S localhost:8000
-```
+### 🔧 Requisitos
+- PHP 7 o superior
+- Navegador web
+- (Opcional) API Key de OpenWeatherMap
 
-- Abre: http://localhost:8000/
+### ▶️ Pasos
 
-Archivos principales
+1. Obtener una API Key gratuita en:  
+   👉 https://openweathermap.org/
 
-- [index.php](index.php) — página principal (requiere PHP para ejecutarse).
-- [assets/style.css](assets/style.css) — estilos con paleta cálida.
-- [assets/sun.svg](assets/sun.svg) — gráfico decorativo.
+2. En PowerShell, definir la variable de entorno (opcional):
 
-Por qué no se ve igual en GitHub Pages
+   ```powershell
+   $env:OWM_API_KEY="TU_API_KEY"
 
-GitHub Pages solo sirve archivos estáticos (HTML, CSS, JS, imágenes). No ejecuta PHP en el servidor. Por eso, cuando abres la página en GitHub Pages verás el código fuente PHP o solo archivos estáticos, pero no la versión renderizada que ves en `localhost`.
-
-Opciones para publicar la página y que se vea como en `localhost`
-
-1) Usar un hosting que soporte PHP (recomendado)
-
-	- Proveedores: Render, Hostinger, o cualquier hosting compartido con PHP.
-	- Subes los archivos y configuras la variable `OWM_API_KEY` en el panel del servidor.
-
-2) Convertir la versión dinámica a estática y publicar en GitHub Pages
-
-	- Genera los archivos estáticos desde `localhost` y súbelos a la rama/`docs/` que uses para GitHub Pages.
-	- Ejemplo con `wget` (WSL o si tienes wget en Windows):
-
-```bash
-php -S localhost:8000
-wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://localhost:8000/ -P output_static
-# luego mueve el contenido de output_static/localhost:8000/ a la carpeta docs/ del repo
-```
-
-	- Alternativa manual: abrir la página en el navegador, "Guardar como..." → `index.html`, y repetir para las rutas necesarias. Luego subir los archivos HTML/CSS/imagenes a la carpeta `docs/`.
-
-3) Usar un servicio que ejecute PHP y desplegar allí (Heroku, Render, etc.)
-
-Instrucciones rápidas para publicar en GitHub Pages (estático)
-
-1. Genera la versión estática (ver método `wget` arriba o guarda manualmente).
-2. Crea una carpeta `docs/` en la raíz del repo y coloca `index.html`, `assets/` y demás archivos estáticos dentro.
-3. En la configuración del repositorio → Pages, selecciona la rama `main` y la carpeta `/docs` como fuente.
-
-Notas sobre la API key
-
-- La variable `OWM_API_KEY` solo se usa en tiempo de ejecución (PHP). Si creas una versión estática, los datos son los que se generaron en el momento del volcado; para datos en tiempo real necesitas un servidor que ejecute PHP.
 
 ¿Qué puedo hacer por ti ahora?
 
 - Puedo generar la versión estática de la página y copiarla a `docs/` para que GitHub Pages la muestre tal cual la ves en `localhost`.
 - O puedo preparar instrucciones paso a paso para desplegar en un hosting con PHP.
+
