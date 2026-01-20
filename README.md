@@ -52,9 +52,8 @@ Este proyecto fue desarrollado en **PHP** y funciona correctamente en un entorno
    ```powershell
    $env:OWM_API_KEY="TU_API_KEY"
 
+# 🌦️ POYECTO DE TRABAJO DE TICS _🥇
 
-¿Qué puedo hacer por ti ahora?
+- PROYECTO DE TRABAJO DE TICS CON GIT HUB PAGES 
 
-- Puedo generar la versión estática de la página y copiarla a `docs/` para que GitHub Pages la muestre tal cual la ves en `localhost`.
-- O puedo preparar instrucciones paso a paso para desplegar en un hosting con PHP.
 
